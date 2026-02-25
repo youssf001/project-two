@@ -316,3 +316,124 @@ header form {
   }
 }
 /* end services */
+/* start design  */
+.design {
+  padding: var(--section-padding);
+  background-image:url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg) ;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.design::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.design .image {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: 214px;
+}
+.design .text {
+    width: 50%;
+    background: var(--transparent-color);
+    padding: 50px;
+    position: absolute;
+    right: 0;
+    color: white;
+}
+.design .text h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.design li {
+    padding: 15px 0;
+}
+.design li i {
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .design .image{
+    display: none;
+  }
+  .design .text {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* end design  */
+ /* start portfolio  */
+.portfolio {
+  padding: var(--section-padding);
+}
+.portfolio ul.shuffla {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-weight: 500;
+    color: #3b3b3b;
+}
+.portfolio li.active {
+    padding: 7px 10px;
+    background: #03A9F4;
+    color: white;
+    border-radius: 5px;
+    margin-top: -7px;
+}
+.portfolio .imgs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  row-gap: 1px;
+  margin-top: 50px;
+}
+.portfolio .imgs-container .box {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .imgs-container img {
+  width: 100%;
+}
+.portfolio .imgs-container .box:hover img {
+  transform: scale(1.1) rotate(3deg);
+  transition: 0.5s;
+}
+.portfolio .caption {
+    padding: 15px;
+    position: absolute;
+    bottom: -75.58px;
+    background: #ffffffc9;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    transition: 0.5s;
+}
+.portfolio .imgs-container .box:hover .caption {
+    bottom: 0;
+}
+.portfolio .caption h4 {
+  font-weight: normal;
+}
+.portfolio .caption p {
+    color: var(--main-color);
+    line-height: 1.7;
+}
+.portfolio .more {
+    display: block;
+    margin: 50px auto;
+    background: #2196F3;
+    padding: 12px;
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 5px; ;
+}
+ /* end portfolio  */
