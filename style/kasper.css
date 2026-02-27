@@ -427,7 +427,7 @@ header form {
 .portfolio .more {
     display: block;
     margin: 50px auto;
-    background: #2196F3;
+    background: var(--main-color);
     padding: 12px;
     width: fit-content;
     color: white;
@@ -437,3 +437,68 @@ header form {
     border-radius: 5px; ;
 }
  /* end portfolio  */
+ /* start video */
+.video {
+  position: relative;
+  padding: var(--section-padding);
+  padding-top: 0;
+}
+.video video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.video video {
+  width: 100%;
+  display: block;
+}
+.video .text {
+  position: absolute;
+  top: 50%;
+  transform: translatey( -50%);
+  color: white;
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  background-color: var(--transparent-color);
+}
+.video .text h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.video .text p {
+  font-size: 14px;
+  margin: 30px;
+}
+.video .text a {
+  display: inline-block;
+  background: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.video .text a:hover {
+  background: rgb(49, 49, 49);
+}
+ /* end video */
+ /* start about */
+ .about {
+      position: relative;
+    overflow: hidden;
+    height: 337px;
+ }
+ .about .container {
+ }
+ .about img {
+  width: 100%;
+  max-width: 500px;
+    position: absolute;
+    bottom: -114px;
+    left: 50%;
+    transform: translateX(-50%);
+
+ }
+ /* end about */
