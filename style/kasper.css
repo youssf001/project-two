@@ -599,18 +599,18 @@ header form {
   margin: 27px auto;
   text-align: center;
 }
-.content {
+.our-skills .content {
   display: flex;
   margin: 33px 0;
 }
 .our-skills img {
   height: 100px;
   border-radius: 73px;
-  corner-shape: superellipse(1);
+  -webkit-corner-shape: superellipse(1);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.text {
+.our-skills .text {
   line-height: 1.8;
   margin-left: 61px;
   border-bottom: 1px solid #ccc;
@@ -662,15 +662,15 @@ header form {
   z-index: -1;
 }
 ul.bullets {
-  width: 100px;
+  width: 62px;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 ul.bullets li {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 15px;
   border-radius: 50px;
   border: 2px solid #9d9d9d;
 }
@@ -688,15 +688,290 @@ ul.bullets li.active {
   .our-skills .skills {
     flex-basis: 100%;
   }
-  .content {
+  .our-skills .content {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .text {
+  .our-skills .text {
     margin-left: 0;
     margin-top: 20px;
     border-bottom: none;
   }
 }
 /* end skills */
+/* start quote */
+.quote {
+  padding: var(--section-padding);
+  background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/quote.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.quote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.quote .container {
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.quote p {
+  font-size: 1.9em;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+/* end quote */
+
+/* RTL overrides — simple and safe defaults for pages with dir="rtl" */
+html[dir="rtl"] {
+  direction: rtl;
+}
+html[dir="rtl"] header .logo {
+  margin-left: auto;
+  margin-right: 0;
+}
+html[dir="rtl"] header form {
+  margin-left: 0;
+  margin-right: 4px;
+  border-left: none;
+  border-right: solid 1px white;
+}
+html[dir="rtl"] header nav ul {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .landing .text {
+  left: auto;
+  right: 0;
+  justify-content: flex-start;
+}
+html[dir="rtl"] .design .image {
+  left: auto;
+  right: 0;
+}
+html[dir="rtl"] .design .text {
+  right: auto;
+  left: 0;
+}
+
+/* start pricing */
+.pricing {
+  padding: var(--section-padding);
+}
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.pricing .plans .plan {
+  background: #fcfcfc;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 0px #00bcd438;
+  border-bottom: solid 1px var(--main-color);
+  border-top: solid 1px var(--main-color);
+}
+.pricing .plan .head {
+  padding: 19px 26px;
+  border-bottom: solid 1px var(--main-color);
+  margin-bottom: 30px;
+}
+.pricing .plan h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+.pricing .plan span {
+  font-size: 4em;
+  font-weight: 700;
+}
+.pricing span::before {
+  content: "$";
+  font-size: 0.4em;
+  font-weight: normal;
+  vertical-align: top;
+  position: relative;
+  left: -10px;
+}
+.pricing .plan span::after {
+  content: "/mo";
+  font-size: 0.3em;
+  vertical-align: bottom;
+  position: relative;
+  left: 10px;
+}
+.pricing .plan ul {
+  border-bottom: solid 1px var(--main-color);
+}
+.pricing .plan li {
+  padding: 20px;
+  position: relative;
+}
+.pricing .plan li:not(:last-child)::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pricing a {
+  text-decoration: none;
+  width: fit-content;
+  padding: 15px 25px;
+  margin: 29px auto;
+  display: block;
+  border: solid 1px deepskyblue;
+  background: transparent;
+  color: #03a9f4;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.pricing a:hover {
+  background: var(--main-color);
+  border-color: white;
+  color: white;
+}
+.contact-text {
+  margin-top: 95px;
+  text-align: center;
+}
+.contact-link {
+  background: var(--main-color) !important;
+  color: white !important;
+}
+/* end pricing */
+/* start subscribe */
+.subscribe {
+  padding: var(--section-padding);
+  background: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg)
+    top / cover;
+  position: relative;
+}
+.subscribe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.subscribe .container {
+  display: flex;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+}
+.subscribe form {
+  display: flex;
+  margin: 20px;
+}
+@media (max-width: 767px) {
+  .subscribe .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe form {
+    align-items: center;
+  }
+}
+.subscribe input {
+  padding: 18px;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  font-size: 1em;
+}
+.subscribe input::placeholder {
+  color: white;
+}
+.subscribe input[type="email"] {
+  border-right: 0;
+  background: transparent;
+  padding-right: 60px;
+}
+.subscribe input[type="submit"] {
+  border-left: 0;
+  background: var(--main-color);
+}
+.subscribe p {
+  align-content: center;
+}
+/* end subscribe */
+/* start contact  */
+.contact {
+  padding: var(--section-padding);
+}
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+.contact form {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact .main-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 29px;
+  outline: none;
+  border: solid 1px #ccc;
+  font-size: 1.4em;
+}
+.contact .main-input::placeholder {
+  color: #ccc;
+}
+.contact textarea {
+  height: 150px;
+}
+.contact input[type="submit"] {
+  width: fit-content;
+  padding: 20px 20px;
+  background: var(--main-color);
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+.contact .info {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+}
+.contact h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+.contact h4:last-of-type {
+  margin-top: 27px;
+}
+.contact address {
+  line-height: 1.7;
+  color: #777;
+}
+@media (max-width: 767px) {
+  .contact .content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .contact form {
+    align-items: center;
+  }
+  .contact .info {
+    margin-bottom: 10px;
+  }
+}
+/* end contact  */
