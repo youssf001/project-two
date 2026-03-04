@@ -975,3 +975,49 @@ html[dir="rtl"] .design .text {
   }
 }
 /* end contact  */
+/* start footer  */
+footer {
+  padding: 50px 0;
+  background: #1f2021 url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg) top / cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+footer .container {
+  position: relative;
+  z-index: 2;
+}
+footer img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+footer p:first-of-type {
+font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 20px;
+    width: fit-content;
+    margin: 20px auto;
+    border-bottom: solid 1px white;
+}
+footer .social-icons {
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+}
+footer p:last-of-type {
+    margin: 40px 4px -25px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+footer p span {
+    color: var(--main-color);
+    font-weight: 700;
+}
+/* end footer  */
